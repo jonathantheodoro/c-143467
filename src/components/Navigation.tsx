@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Command, Menu } from "lucide-react";
 import { Button } from "./ui/button";
@@ -20,7 +21,7 @@ const Navigation = () => {
     if (sectionId === 'testimonials') {
       const testimonialSection = document.querySelector('.animate-marquee');
       if (testimonialSection) {
-        const yOffset = -100; // Offset to account for the fixed header
+        const yOffset = -100;
         const y = testimonialSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
@@ -40,9 +41,9 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: "Features", href: "#features", onClick: () => scrollToSection('features') },
-    { name: "Prices", href: "#pricing", onClick: () => scrollToSection('pricing') },
-    { name: "Testimonials", href: "#testimonials", onClick: () => scrollToSection('testimonials') },
+    { name: "Funcionalidades", href: "#features", onClick: () => scrollToSection('features') },
+    { name: "Planos", href: "#pricing", onClick: () => scrollToSection('pricing') },
+    { name: "Depoimentos", href: "#testimonials", onClick: () => scrollToSection('testimonials') },
   ];
 
   return (
@@ -57,7 +58,7 @@ const Navigation = () => {
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
             <Command className="w-5 h-5 text-primary" />
-            <span className="font-bold text-base">CryptoTrade</span>
+            <span className="font-bold text-base">ObraView</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -82,7 +83,7 @@ const Navigation = () => {
               size="sm"
               className="button-gradient"
             >
-              Start Trading
+              Comece Grátis
             </Button>
           </div>
 
@@ -119,7 +120,7 @@ const Navigation = () => {
                     }}
                     className="button-gradient mt-4"
                   >
-                    Start Trading
+                    Comece Grátis
                   </Button>
                 </div>
               </SheetContent>
