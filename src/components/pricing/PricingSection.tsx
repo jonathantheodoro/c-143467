@@ -17,7 +17,7 @@ const PricingTier = ({
   features: string[];
   isPopular?: boolean;
 }) => (
-  <CardSpotlight className={`h-full ${isPopular ? "border-primary" : "border-white/10"} border-2`}>
+  <CardSpotlight className={`h-full ${isPopular ? "border-primary" : "border-border"} border-2`}>
     <div className="relative h-full p-6 flex flex-col">
       {isPopular && (
         <span className="text-xs font-medium bg-primary/10 text-primary rounded-full px-3 py-1 w-fit mb-4">
@@ -27,14 +27,14 @@ const PricingTier = ({
       <h3 className="text-xl font-medium mb-2">{name}</h3>
       <div className="mb-4">
         <span className="text-4xl font-bold">{price}</span>
-        {price !== "Personalizado" && <span className="text-gray-400">/mês</span>}
+        {price !== "Personalizado" && <span className="text-muted-foreground">/mês</span>}
       </div>
-      <p className="text-gray-400 mb-6">{description}</p>
+      <p className="text-muted-foreground mb-6">{description}</p>
       <ul className="space-y-3 mb-8 flex-grow">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center gap-2">
             <Check className="w-5 h-5 text-primary" />
-            <span className="text-sm text-gray-300">{feature}</span>
+            <span className="text-sm text-muted-foreground">{feature}</span>
           </li>
         ))}
       </ul>

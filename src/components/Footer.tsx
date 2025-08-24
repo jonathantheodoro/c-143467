@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-white/10">
+          <div className="mt-8 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground text-center">
               © {new Date().getFullYear()} ObraView. Todos os direitos reservados.
             </p>
